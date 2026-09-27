@@ -8,6 +8,7 @@
     <style>
         :root {
             --primary-color: #1E3A8A;
+            --secondary-color: #2563EB;
             --text-color: #334155;
             --bg-color: #F8FAFC;
             --card-bg: #FFFFFF;
@@ -21,22 +22,23 @@
             padding: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 40px auto;
             padding: 20px;
         }
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         .header h1 {
             color: var(--primary-color);
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .last-updated {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #64748B;
+            font-weight: 500;
         }
         .content {
             background-color: var(--card-bg);
@@ -49,10 +51,12 @@
             border-bottom: 2px solid #E2E8F0;
             padding-bottom: 8px;
             margin-top: 32px;
+            font-size: 1.5rem;
         }
         h3 {
             color: #1E293B;
-            margin-top: 24px;
+            margin-top: 20px;
+            font-size: 1.2rem;
         }
         p {
             margin-bottom: 16px;
@@ -64,6 +68,13 @@
         li {
             margin-bottom: 8px;
         }
+        .highlight-box {
+            background-color: #EFF6FF;
+            border-left: 4px solid var(--secondary-color);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -73,7 +84,8 @@
         }
         @media (max-width: 600px) {
             .container {
-                margin: 20px auto;
+                margin: 16px auto;
+                padding: 12px;
             }
             .content {
                 padding: 20px;
@@ -93,35 +105,76 @@
         
         <div class="content">
             <h2>Privacy Policy</h2>
-            <p>Welcome to CashBook Pro ("Apka Digital Bahi Khata"). Your privacy is our top priority. This Privacy Policy outlines how we collect, use, and protect your information when you use our mobile application.</p>
+            <p>Welcome to <strong>CashBook Pro</strong> ("Apka Digital Bahi Khata"). Your financial privacy and data sovereignty are our fundamental priorities. This Privacy Policy outlines how CashBook Pro collects, processes, protects, and handles your data across all modules, including local ledger storage, staff access controls, live exchange rates, automated bank SMS syncing, AI voice processing, and cloud backups.</p>
 
-            <h3>1. Data Sovereignty & Offline-First Policy</h3>
-            <p>CashBook Pro operates primarily as an <strong>offline-first</strong> application. Your financial records, including ledger entries, customer details, and transaction history, are stored locally on your device in a secured sandbox. We do not transmit this data to our servers unless you explicitly enable Cloud Synchronization features.</p>
+            <div class="highlight-box">
+                <strong>Core Privacy Principle:</strong> CashBook Pro operates as an <em>offline-first application</em>. Your business ledgers, customer accounts, inventory records, and financial transactions remain stored locally on your device in a sandboxed SQLite database.
+            </div>
 
-            <h3>2. Information We Collect</h3>
+            <h2>1. Data Sovereignty & Local Ledger Storage</h2>
+            <p>All financial entries, party ledger books, cash flows, inventory SKUs, custom categories, and PDF invoices created in CashBook Pro are saved on your local device storage. We do not transmit or mirror your local ledger entries to third-party servers unless you explicitly activate voluntary Cloud Synchronization.</p>
+
+            <h2>2. Admin Panel & Staff Access Rights</h2>
+            <p>CashBook Pro features a role-based Staff Access Management system:</p>
             <ul>
-                <li><strong>Account Information:</strong> If you sign in via Google, we collect your email address and profile name to manage your subscription and license.</li>
-                <li><strong>Cloud Backups:</strong> If you enable Google Drive sync, the app uploads your encrypted database to your own private Google Drive storage. We do not have access to these files.</li>
-                <li><strong>Device Information:</strong> We collect an app-scoped unique identifier to manage multi-device licensing. This identifier is not linked to your physical hardware ID (IMEI/Serial).</li>
+                <li><strong>Admin Accounts:</strong> Primary account owners hold master administrative credentials, PIN/Biometric lock rights, and full visibility over all ledgers and financial reports.</li>
+                <li><strong>Staff & Manager Credentials:</strong> Staff members are granted restricted access credentials based on configured permission tiers (e.g., restricted report viewing or party-level ledger entry). Staff credentials and PINs are stored in encrypted format on the local device.</li>
             </ul>
 
-            <h3>3. Permissions Usage</h3>
+            <h2>3. Live Currency Exchange Rates</h2>
+            <p>To provide real-time multi-currency conversions and global transaction support, CashBook Pro fetches public currency exchange rates via secure HTTPS API requests. These network requests transmit zero personal, financial, or user-identifying data and only query standard ISO currency codes (e.g., USD, PKR, EUR, AED, SAR).</p>
+
+            <h2>4. Bank SMS & Notification Auto-Sync</h2>
+            <p>If you enable the optional <strong>Bank Auto-Sync Listener</strong> service:</p>
             <ul>
-                <li><strong>Camera/Storage:</strong> Used solely to attach receipt photos to your transactions via the Android Photo Picker.</li>
-                <li><strong>Microphone:</strong> Used only when you trigger the "Voice Khata" feature for voice-to-text input. Audio is processed locally.</li>
-                <li><strong>Contacts:</strong> Optional permission to help you quickly add parties to your ledger.</li>
+                <li>The app inspects incoming system transaction notifications from recognized banking institution sender IDs.</li>
+                <li>Notification text is parsed locally on your device to extract transaction amounts, dates, and account titles for automatic ledger entry.</li>
+                <li>Notification contents are processed <strong>strictly on-device</strong> and are never uploaded, stored externally, or shared with any third party.</li>
             </ul>
 
-            <h3>4. Data Security</h3>
-            <p>We use industry-standard encryption (AES-256) for local backups. Cloud communication is secured via TLS/SSL. All data stored in Firebase is protected by strict security rules and is accessible only through your authenticated account.</p>
+            <h2>5. AI Natural Voice Khata & Document OCR</h2>
+            <p>CashBook Pro integrates intelligent accounting tools:</p>
+            <ul>
+                <li><strong>Voice Khata:</strong> Uses Android's native Speech-To-Text service to convert spoken ledger entries into structured transactions. Audio streams are not retained after transcription.</li>
+                <li><strong>Smart Receipt Scanner (OCR):</strong> Analyzes receipt and invoice images selected by the user to auto-populate transaction amounts and dates. Scanning occurs directly on-device using local optical character recognition.</li>
+            </ul>
 
-            <h3>5. User Rights & Data Deletion</h3>
-            <p>You have the absolute right to access, export, or delete your data at any time. A "Delete Account" feature is available in the Settings menu, which permanently removes all your records from our Firebase servers, Google Drive backups, and your local device.</p>
+            <h2>6. Cloud Synchronization & Google Drive Backup</h2>
+            <ul>
+                <li><strong>Google Drive Sync:</strong> When activated by the user, CashBook Pro uploads an encrypted backup archive directly to the user's private Google Drive application data folder (`appDataFolder`). CashBook Pro developers have zero access to your Google Drive files.</li>
+                <li><strong>Firebase Account Authentication:</strong> Used solely to authenticate subscription tiers, multi-device licensing, and store account credentials securely via TLS/SSL encryption.</li>
+            </ul>
 
-            <h3>6. Contact Us</h3>
-            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-            <p><strong>Email:</strong> waqaskasuri850@gmail.com<br>
-               <strong>Support Desk:</strong> Available within the app under Help & Support.</p>
+            <h2>7. Device Permissions Usage</h2>
+            <ul>
+                <li><strong>Camera (`android.permission.CAMERA`):</strong> Requested at runtime only when taking receipt photos or scanning inventory barcodes/QR codes.</li>
+                <li><strong>Microphone (`android.permission.RECORD_AUDIO`):</strong> Requested at runtime only when triggering the Voice Khata microphone.</li>
+                <li><strong>Storage / Media Images:</strong> Accesses selected receipt images via the zero-permission system Photo Picker.</li>
+                <li><strong>Notifications (`android.permission.POST_NOTIFICATIONS`):</strong> Delivers transaction reminders and daily ledger summaries on Android 13+.</li>
+                <li><strong>Biometric / Fingerprint:</strong> Authenticates user access to the app lock screen. Biometric templates remain inside the hardware secure element and are never accessed by the app.</li>
+            </ul>
+
+            <h2>8. Data Security & Encryption Standards</h2>
+            <p>We implement bank-grade security protocols across the application:</p>
+            <ul>
+                <li>All network communications utilize TLS 1.3 / SSL encryption.</li>
+                <li>Local database backups are encrypted with AES-256 standard.</li>
+                <li>App sandbox protection prevents unauthorized third-party apps from reading your financial records.</li>
+            </ul>
+
+            <h2>9. User Rights & Complete Account Deletion</h2>
+            <p>In accordance with Google Play Developer Policies, GDPR, and CCPA standards:</p>
+            <ul>
+                <li><strong>Data Export:</strong> You can export your full transaction ledger to CSV, Microsoft Excel, or PDF at any time.</li>
+                <li><strong>Total Data Eradication:</strong> You can purge all database entries, staff credentials, and cloud records at any time via <strong>Settings -> Account Management -> Delete Account & Data</strong>.</li>
+            </ul>
+
+            <h2>10. Contact Us & Compliance Support</h2>
+            <p>For any privacy queries, compliance audits, or data rights requests, please contact our engineering desk:</p>
+            <p>
+                <strong>Compliance Email:</strong> waqaskasuri850@gmail.com<br>
+                <strong>Support Channel:</strong> Help & Support within CashBook Pro
+            </p>
         </div>
 
         <div class="footer">
