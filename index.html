@@ -101,78 +101,74 @@
         .masthead-lead {
             font-size: 1.05rem;
             color: #94A3B8;
-            max-width: 760px;
-            line-height: 1.65;
-            margin-bottom: 24px;
+            max-width: 780px;
+            margin-bottom: 28px;
         }
 
         .metadata-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px 20px;
         }
 
         .metadata-item {
-            font-size: 12.5px;
+            font-size: 13px;
             color: #CBD5E1;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
         .metadata-item strong {
             color: #FFFFFF;
-            font-weight: 600;
+            display: block;
+            margin-bottom: 2px;
         }
 
         .wrapper {
             max-width: 900px;
-            margin: -24px auto 60px;
-            padding: 0 16px;
+            margin: -24px auto 48px;
+            padding: 0 20px;
             position: relative;
-            z-index: 10;
+            z-index: 2;
         }
 
         .document-card {
-            background-color: var(--brand-card);
+            background: var(--brand-card);
             border: 1px solid var(--brand-border);
             border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
-            padding: 44px 40px;
+            padding: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 10px 15px -3px rgba(0, 0, 0, 0.02);
         }
 
         .executive-box {
-            background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+            background: var(--brand-accent-light);
             border: 1px solid #BFDBFE;
             border-left: 5px solid var(--brand-accent);
             border-radius: 10px;
             padding: 22px 24px;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
         }
 
         .executive-title {
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #1E3A8A;
-            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1E3A8A;
+            margin-bottom: 10px;
         }
 
         .executive-text {
-            font-size: 14px;
-            color: #1E293B;
-            line-height: 1.65;
-            font-weight: 500;
+            color: #1E40AF;
+            font-size: 14.5px;
+            line-height: 1.7;
         }
 
         .article {
-            margin-bottom: 44px;
+            margin-bottom: 40px;
             padding-bottom: 36px;
             border-bottom: 1px solid var(--brand-border);
         }
@@ -184,209 +180,113 @@
         }
 
         .article-header {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
             margin-bottom: 18px;
         }
 
         .article-tag {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
-            font-weight: 700;
+            font-size: 11.5px;
+            font-weight: 600;
             color: var(--brand-accent);
-            background-color: var(--brand-accent-light);
-            padding: 4px 10px;
-            border-radius: 6px;
-            border: 1px solid #DBEAFE;
-            white-space: nowrap;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
         }
 
         .article-title {
-            font-size: 1.35rem;
-            font-weight: 800;
+            font-size: 1.45rem;
+            font-weight: 700;
             color: var(--text-title);
             letter-spacing: -0.02em;
-            line-height: 1.3;
         }
 
         p {
-            margin-bottom: 16px;
-            color: #334155;
-            font-size: 14.5px;
-            line-height: 1.8;
+            margin-bottom: 14px;
         }
 
         .provisions-list {
             list-style: none;
-            margin: 16px 0 20px;
+            margin: 16px 0;
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
 
         .provision-item {
-            position: relative;
-            padding-left: 24px;
+            background: #F8FAFC;
+            border: 1px solid var(--brand-border);
+            border-radius: 10px;
+            padding: 16px 20px;
             font-size: 14px;
-            color: #334155;
-            line-height: 1.7;
-        }
-
-        .provision-item::before {
-            content: "§";
-            position: absolute;
-            left: 2px;
-            top: 0;
-            font-weight: 700;
-            color: var(--brand-accent);
-            font-size: 15px;
+            line-height: 1.65;
         }
 
         .provision-item strong {
             color: var(--text-title);
-            font-weight: 700;
-        }
-
-        .table-responsive {
-            width: 100%;
-            overflow-x: auto;
-            margin: 20px 0 24px;
-            border-radius: 8px;
-            border: 1px solid var(--brand-border);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 13.5px;
-        }
-
-        th {
-            background-color: #F8FAFC;
-            color: var(--brand-navy);
-            font-weight: 700;
-            padding: 12px 16px;
-            border-bottom: 1px solid var(--brand-border);
-            text-transform: uppercase;
-            font-size: 11.5px;
-            letter-spacing: 0.6px;
-        }
-
-        td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #F1F5F9;
-            color: #334155;
-            vertical-align: top;
-            line-height: 1.6;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tr:nth-child(even) td {
-            background-color: #FAFAFA;
-        }
-
-        .legal-highlight {
-            background-color: #F8FAFC;
-            border: 1px solid var(--brand-border);
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin: 18px 0;
-            font-size: 13.5px;
-            color: #475569;
-        }
-
-        .legal-highlight strong {
-            color: var(--text-title);
         }
 
         .corporate-card {
-            background: linear-gradient(135deg, #090D16 0%, #0F172A 100%);
+            background: #F1F5F9;
+            border: 1px solid #CBD5E1;
             border-radius: 12px;
-            color: #FFFFFF;
-            padding: 32px;
-            margin-top: 40px;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+            padding: 24px;
+            margin-top: 24px;
         }
 
         .corporate-card h3 {
-            font-size: 1.25rem;
+            font-size: 16px;
             font-weight: 700;
-            margin-bottom: 8px;
-            color: #FFFFFF;
-        }
-
-        .corporate-card p {
-            color: #94A3B8;
-            font-size: 13.5px;
-            margin-bottom: 20px;
+            color: var(--text-title);
+            margin-bottom: 12px;
         }
 
         .contact-details {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-col {
-            font-size: 13px;
-            color: #E2E8F0;
+            margin-top: 14px;
+            font-size: 14px;
         }
 
         .contact-col strong {
             display: block;
-            color: #93C5FD;
-            font-size: 11.5px;
+            color: var(--text-muted);
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 4px;
         }
 
         .contact-col a {
-            color: #FFFFFF;
+            color: var(--brand-accent);
             text-decoration: none;
             font-weight: 600;
-            border-bottom: 1px dotted #93C5FD;
+        }
+
+        .contact-col a:hover {
+            text-decoration: underline;
         }
 
         .page-footer {
             text-align: center;
-            padding: 32px 20px;
-            font-size: 12px;
+            padding: 32px 20px 48px;
+            font-size: 13px;
             color: var(--text-muted);
-            border-top: 1px solid #E2E8F0;
-            background-color: #FFFFFF;
         }
 
         @media (max-width: 768px) {
             .masthead {
-                padding: 36px 16px 32px;
+                padding: 32px 16px;
             }
             .masthead h1 {
-                font-size: 1.75rem;
+                font-size: 1.8rem;
             }
             .document-card {
                 padding: 24px 18px;
-                border-radius: 12px;
-            }
-            .article-header {
-                flex-direction: column;
-                gap: 6px;
             }
             .article-title {
-                font-size: 1.2rem;
-            }
-            .metadata-grid {
-                grid-template-columns: 1fr;
-            }
-            .corporate-card {
-                padding: 22px 18px;
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -405,7 +305,7 @@
             </p>
             <div class="metadata-grid">
                 <div class="metadata-item"><strong>Corporate Entity:</strong> CashBook Pro Global</div>
-                <div class="metadata-item"><strong>Effective Date:</strong> October 2, 2026</div>
+                <div class="metadata-item"><strong>Effective Date:</strong> October 21, 2026</div>
                 <div class="metadata-item"><strong>Architecture:</strong> Zero-Knowledge / Offline Enclave</div>
                 <div class="metadata-item"><strong>Statutory Scope:</strong> GDPR • CCPA • Google Play Policy</div>
             </div>
@@ -462,63 +362,41 @@
             <article class="article">
                 <div class="article-header">
                     <span class="article-tag">ARTICLE III</span>
-                    <h2 class="article-title">Commercial Document Rendering & Reporting Engine</h2>
+                    <h2 class="article-title">Smart Assistant Operations & Network Security</h2>
                 </div>
                 <p>
-                    CashBook Pro incorporates an embedded, offline PDF rendering and rasterization pipeline designed to compile official business reports without cloud API dependencies:
+                    CashBook Pro incorporates an optional smart assistant and document optical recognition engine to streamline automated bookkeeping, voice vouchers, and supplier invoice intake:
                 </p>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Document Standard</th>
-                                <th>Operational Scope</th>
-                                <th>Data Transmission Vector</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Official Ledger Statements</strong></td>
-                                <td>Full double-entry chronological statements with running balances, net reconciliation, and signatory attestation blocks.</td>
-                                <td>Zero transmission. Rendered directly into device RAM via Android Canvas and saved to private cache.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>POS Thermal Slips (58mm / 80mm)</strong></td>
-                                <td>Compact point-of-sale receipt formatting engineered for low-energy Bluetooth and USB thermal counter printers.</td>
-                                <td>Direct local hardware dispatch over paired Bluetooth/USB serial communication.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Commercial Tax Invoices</strong></td>
-                                <td>Standardized commercial bills featuring company logos, NTN/GST tax registries, customer particulars, and itemized calculations.</td>
-                                <td>Zero transmission. Exported to local storage or shared via Android native Sharesheet under user direction.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Spreadsheet Exports (Excel & CSV)</strong></td>
-                                <td>Tabular business datasets structured for enterprise ingestion into third-party audit software (e.g., QuickBooks, Tally, Zoho).</td>
-                                <td>Saved to designated local device directory with zero external telemetry.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <ul class="provisions-list">
+                    <li class="provision-item">
+                        <strong>Ephemeral Processing:</strong> Prompts transmitted for invoice parsing or natural language ledger booking are processed purely ephemerally over encrypted TLS 1.3 channels.
+                    </li>
+                    <li class="provision-item">
+                        <strong>Zero Persistent Model Training:</strong> Financial records, party titles, balances, and voucher amounts sent for processing are not utilized to train foundation models or retained in model provider databases.
+                    </li>
+                    <li class="provision-item">
+                        <strong>Direct Client-Side Keys:</strong> Users retain the affirmative option to input their personal enterprise API credential within the application settings, bypassing any central intermediate proxies.
+                    </li>
+                </ul>
             </article>
 
             <article class="article">
                 <div class="article-header">
                     <span class="article-tag">ARTICLE IV</span>
-                    <h2 class="article-title">Role-Based Access Control (RBAC) & Administrative Privileges</h2>
+                    <h2 class="article-title">Google Play Policy Compliance & User Permissions</h2>
                 </div>
                 <p>
-                    To safeguard commercial accounting integrity across multi-employee retail and enterprise operations, CashBook Pro enforces strict Role-Based Access Control:
+                    The Platform adheres rigorously to the Google Play Developer Program Policies, User Data Policies, and Limited Use requirements:
                 </p>
                 <ul class="provisions-list">
                     <li class="provision-item">
-                        <strong>Master Administrative Owner:</strong> Holds sovereign credentialing, biometric unlock authority, unlimited financial dashboard access, audit inspection rights, and exclusive control over database eradication protocols.
+                        <strong>No Broad Storage Permissions:</strong> The application does not request dangerous broad external storage access. Media imports (invoices, receipts) strictly use the zero-permission Android Photo Picker.
                     </li>
                     <li class="provision-item">
-                        <strong>Branch Manager:</strong> Authorized to record ledger entries, review party accounts, and compile PDF statements. Strictly restricted from executing global database wipes or modifying system security architecture.
+                        <strong>Microphone Access:</strong> Microphone permissions are activated solely when the user affirmatively initiates voice voucher input and are immediately released upon completion.
                     </li>
                     <li class="provision-item">
-                        <strong>Counter Cashier:</strong> Restricted strictly to entering current-day sales and counter receipts. Cashiers are cryptographically barred from viewing consolidated corporate profits, modifying historical records, or inspecting global analytics.
+                        <strong>Biometric Authentication:</strong> Local biometric verification leverages Android BiometricPrompt hardware abstraction enclaves; raw biometric hashes never leave device hardware.
                     </li>
                 </ul>
             </article>
@@ -526,145 +404,19 @@
             <article class="article">
                 <div class="article-header">
                     <span class="article-tag">ARTICLE V</span>
-                    <h2 class="article-title">Automated Bank SMS Sync & Notification Telemetry</h2>
+                    <h2 class="article-title">Data Sovereignty, Export & Total Deletion</h2>
                 </div>
                 <p>
-                    Where voluntarily authorized by the Enterprise User, the Platform operates a localized Bank SMS & Notification Auto-Sync Listener:
-                </p>
-                <div class="legal-highlight">
-                    <strong>Zero Interception Guarantee:</strong> The listener filters and inspects incoming messages strictly originating from verified commercial banking alphanumeric sender headers. Non-financial personal SMS communications, private chat messages, and two-factor authentication (2FA) verification OTP codes are programmatically dropped and immediately ignored.
-                </div>
-                <p>
-                    Parsed transaction values (amount, timestamp, debit/credit orientation) are recorded directly into your local database. At no point are raw text payloads or customer financial communications uploaded, mirrored, or analyzed on external servers.
-                </p>
-            </article>
-
-            <article class="article">
-                <div class="article-header">
-                    <span class="article-tag">ARTICLE VI</span>
-                    <h2 class="article-title">Cognitive Intelligence, Neural Speech & Optical OCR Processing</h2>
-                </div>
-                <p>
-                    CashBook Pro integrates intelligent accounting features designed with strict data privacy boundaries:
+                    You maintain complete sovereignty over your commercial data at all times:
                 </p>
                 <ul class="provisions-list">
                     <li class="provision-item">
-                        <strong>AI Financial Chatbot:</strong> The conversational financial analyst answers queries regarding ledger balances, profit trajectories, and outstanding credit. The conversation runs strictly within local session context; business metrics are not retained or utilized to train external machine learning foundation models.
+                        <strong>Full Ledger Portability:</strong> Export complete accounting statements, transaction journals, and customer aging ledgers at any time in standardized PDF, Excel (XLSX), or JSON formats.
                     </li>
                     <li class="provision-item">
-                        <strong>Voice Khata (Speech-to-Text):</strong> Employs native on-device Android SpeechRecognizer services to transcribe spoken ledger commands into structured database entries. Audio waveforms are transiently processed in volatile memory and are purged instantly post-transcription.
-                    </li>
-                    <li class="provision-item">
-                        <strong>Smart Document OCR Scanner:</strong> Optical character recognition executed on invoice photographs analyzes receipt totals and dates directly on local hardware without uploading unencrypted business receipts to third-party endpoints.
+                        <strong>Immediate Deletion:</strong> Clearing app data or utilizing the in-app "Reset Database" command executes a permanent cryptographic overwrite of all local tables and cached vouchers.
                     </li>
                 </ul>
-            </article>
-
-            <article class="article">
-                <div class="article-header">
-                    <span class="article-tag">ARTICLE VII</span>
-                    <h2 class="article-title">Global Multi-Currency Valuation & Live Forex Telemetry</h2>
-                </div>
-                <p>
-                    The Platform incorporates an automated multi-currency conversion matrix covering over 160 international sovereign fiat currencies:
-                </p>
-                <p>
-                    Forex rate queries utilize transport-layer encrypted (TLS 1.3) REST endpoints against authorized global exchange feeds. Telemetric request headers carry exclusively standard ISO-4217 currency identifiers (e.g., <code>PKR</code>, <code>USD</code>, <code>AED</code>, <code>EUR</code>). No account identifier, ledger value, balance sheet sum, or hardware signature is appended to currency telemetry calls.
-                </p>
-            </article>
-
-            <article class="article">
-                <div class="article-header">
-                    <span class="article-tag">ARTICLE VIII</span>
-                    <h2 class="article-title">Cloud Repositories & Private Google Drive Integration</h2>
-                </div>
-                <p>
-                    Cloud synchronization is voluntary, user-initiated, and governed by zero-knowledge access barriers:
-                </p>
-                <ul class="provisions-list">
-                    <li class="provision-item">
-                        <strong>Google Drive AppData Sandbox:</strong> Cloud archives reside within the user's isolated Google Drive Application Data Folder (<code>appDataFolder</code>). This enclave is accessible solely by the authenticated user's Google token. CashBook Pro software engineers and platform operators possess zero technical capability or legal authorization to view or decrypt Drive backup files.
-                    </li>
-                    <li class="provision-item">
-                        <strong>Firebase Infrastructure Security:</strong> Where realtime multi-device sync is licensed, data transmission operates exclusively under TLS 1.3 cryptographic enforcement backed by strict granular server-side rules restricting database access exclusively to authenticated account owners.
-                    </li>
-                </ul>
-            </article>
-
-            <article class="article">
-                <div class="article-header">
-                    <span class="article-tag">ARTICLE IX</span>
-                    <h2 class="article-title">Android Operating System Privilege Matrix</h2>
-                </div>
-                <p>
-                    In accordance with the <em>Google Play Developer Program Least-Privilege Mandate</em>, system permissions are requested exclusively when functionally necessary:
-                </p>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Operating Permission</th>
-                                <th>Authorization Model</th>
-                                <th>Functional Operational Purpose</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code>android.permission.CAMERA</code></td>
-                                <td>Explicit Runtime Prompt</td>
-                                <td>Capturing receipt attachments and scanning inventory barcodes/QR codes.</td>
-                            </tr>
-                            <tr>
-                                <td><code>android.permission.RECORD_AUDIO</code></td>
-                                <td>Explicit Runtime Prompt</td>
-                                <td>Transient voice command transcription in Voice Khata input mode.</td>
-                            </tr>
-                            <tr>
-                                <td><code>android.permission.POST_NOTIFICATIONS</code></td>
-                                <td>Explicit Runtime Prompt</td>
-                                <td>Dispatching daily reconciliation reminders and due-payment balance alerts.</td>
-                            </tr>
-                            <tr>
-                                <td><code>android.permission.USE_BIOMETRIC</code></td>
-                                <td>System Guarded Enclave</td>
-                                <td>Hardware-secured cryptographic validation for application lock access.</td>
-                            </tr>
-                            <tr>
-                                <td>Photo Picker (Zero-Permission)</td>
-                                <td>System Intent Scoped</td>
-                                <td>Enables receipt selection without requesting broad device media/storage read rights.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </article>
-
-            <article class="article">
-                <div class="article-header">
-                    <span class="article-tag">ARTICLE X</span>
-                    <h2 class="article-title">Statutory User Rights & Absolute Data Eradication</h2>
-                </div>
-                <p>
-                    In strict conformance with international data privacy frameworks, including the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and global commercial data governance codes:
-                </p>
-                <ul class="provisions-list">
-                    <li class="provision-item">
-                        <strong>Right to Universal Portability:</strong> The Enterprise User retains the unrestricted prerogative to export complete accounting records into non-proprietary formats (CSV, Excel, PDF) at any juncture.
-                    </li>
-                    <li class="provision-item">
-                        <strong>Right to Total Data Erasure:</strong> A permanent, one-click <em>"Delete Account & Purge Data"</em> protocol is permanently accessible via <strong>Settings &rarr; Account Management</strong>. Execution of this command permanently wipes local Room database records, revokes Drive backup authorization, and deletes cloud sync identifiers.
-                    </li>
-                </ul>
-            </article>
-
-            <article class="article">
-                <div class="article-header">
-                    <span class="article-tag">ARTICLE XI</span>
-                    <h2 class="article-title">Statutory Compliance Attestation & Regulatory Contact</h2>
-                </div>
-                <p>
-                    CashBook Pro certifies full compliance with the Google Play Developer Program Policies, Financial Services Data Protection Standards, and applicable consumer protection statutes. Any material modification to this Charter will be announced via in-app notification dispatch prior to enforcement.
-                </p>
 
                 <div class="corporate-card">
                     <h3>Office of Data Protection & Compliance</h3>
